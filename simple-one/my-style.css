@@ -1,0 +1,9 @@
+#secure-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#secure-contact-form input,
+#secure-contact-form textarea {
+  padding: 10px;
+}

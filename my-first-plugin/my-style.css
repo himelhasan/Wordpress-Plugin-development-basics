@@ -1,0 +1,9 @@
+#first-secure-plugin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#first-secure-plugin-form input,
+#first-secure-plugin-form textarea {
+  padding: 10px;
+}
