@@ -1,0 +1,91 @@
+/**
+ * QRCode CSS Styles
+ * 
+ * This file contains all the styles for our QR code display.
+ * It positions the QR code and makes it look nice!
+ */
+
+/* Container for the QR code */
+
+.simple-qrcode-container {
+  position: fixed; /* Fixed position so it stays in place when scrolling */
+  z-index: 9999; /* High z-index to appear above other content */
+  background: #ffffff; /* White background */
+  padding: 15px; /* Space around the QR code */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Position: Bottom Right (default) */
+.simple-qrcode-container.bottom-right {
+  bottom: 20px; /* 20px from bottom */
+  right: 20px; /* 20px from right */
+}
+
+/* Position: Bottom Left */
+.simple-qrcode-container.bottom-left {
+  bottom: 20px; /* 20px from bottom */
+  left: 20px; /* 20px from left */
+}
+
+/* Hover effect - slightly enlarge */
+.simple-qrcode-container:hover {
+  transform: scale(1.05); /* Grow 5% on hover */
+}
+
+/* Heading text styling */
+.simple-qrcode-heading {
+  text-align: center; /* Center the text */
+  font-size: 14px; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  color: #333333; /* Dark gray color */
+  margin-bottom: 10px; /* Space below heading */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    sans-serif;
+}
+
+/* The QR code itself */
+.simple-qrcode {
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+  .simple-qrcode-container {
+    padding: 10px; /* Less padding on mobile */
+  }
+
+  .simple-qrcode-container.bottom-right {
+    right: 10px; /* Closer to edge on mobile */
+    bottom: 10px;
+  }
+
+  .simple-qrcode-container.bottom-left {
+    left: 10px; /* Closer to edge on mobile */
+    bottom: 10px;
+  }
+
+  .simple-qrcode-heading {
+    font-size: 12px; /* Smaller font on mobile */
+    margin-bottom: 8px;
+  }
+}
+
+/* Animation when QR code appears */
+@keyframes qrcode-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.simple-qrcode-container {
+  animation: qrcode-fade-in 0.5s ease-out; /* Fade in animation */
+}

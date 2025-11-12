@@ -41,7 +41,9 @@ class Managing_Assets_Plugin {
         wp_enqueue_style( "ma-main-css", ASSET_URL . "css/style.css", [], MA_VERSION );
 
         wp_enqueue_script( "ma-function-js", ASSET_URL . "js/function.js", [], MA_VERSION, true );
+
     }
+
 }
 
 new Managing_Assets_Plugin();
