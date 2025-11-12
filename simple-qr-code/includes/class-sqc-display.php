@@ -9,10 +9,10 @@
             if ( ! is_singular() ) {
                 return $content;
             }
-            $position = 'bottom-right';
-            $size     = 128;
-            $color    = "#000000";
-            $heading  = "Scan Me";
+            $position = apply_filters( 'sqc_position', 'bottom-right' );
+            $size     = apply_filters( 'sqc_size', 128 );
+            $color    = apply_filters( 'sqc_color', '#000000' );
+            $heading  = apply_filters( 'sqc_heading', 'Scan Me' );
 
             $content .= "<div class='simple-qrcode-container $position'>";
             $content .= "<div class='simple-qrcode-heading'>$heading</div>";
